@@ -1,0 +1,80 @@
+p{
+    margin: 0;
+}
+html{
+    font-family: Roboto,'Helvetica Neue',Helvetica,'Droid Sans',Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+body{
+    width: 310px;
+}
+.title{
+    color: #fff;
+    background-color: #EE4D2D;
+    font-size: 18px;
+    padding: 10px;
+    line-height: 1;
+}
+.content{
+    padding: 10px;
+    font-size: 14px;
+}
+.block{
+    margin-bottom: 20px;
+}
+.mask_input{
+    width: 180px;
+    font-size: 14px;
+    padding: 5px;
+}
+.current_error{
+    font-size: 12px;
+    padding-left: 100px;
+    color: red;
+    display: none;
+}
+.origin_select{
+    width: 230px;
+}
+.btns{
+    text-align: center;
+    margin-top: 20px;
+}
+#clear_btn, #confirm_btn{
+    display: inline-block;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#clear_btn{
+    color: #333;
+    background-color: #f2f2f2;
+}
+#confirm_btn{
+    color: #fff;
+    background-color: #EE4D2D;
+    margin-left: 20px;
+}
+#confirm_btn.disabled{
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* ----------------------- */
+.cinput{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    transition: border-color 0.2s;
+}
+.cinput:focus{
+    border-color: #EE4D2D;
+}
+.cselect{
+    outline: none;
+    cursor: pointer;
+}

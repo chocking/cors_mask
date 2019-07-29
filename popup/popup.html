@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <p class="title">CORS Mask</p>
+    <div class="content">
+      <div class="block">
+        <span>Current mask: </span>
+        <input type="text" class="cinput mask_input" placeholder="please enter a mask origin">
+        <p class="current_error">please input a legal Origin</p>
+      </div>
+      <!-- <div class="block">
+        <span>Starred: </span>
+        <select class="cselect origin_select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+      </div> -->
+      <!-- <div class="block">
+        <span>History: </span>
+        <select class="cselect origin_select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+      </div> -->
+
+      <div class="btns">
+        <button id='clear_btn'>Clear</button>
+        <button id='confirm_btn'>Confirm</button>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
