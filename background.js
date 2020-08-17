@@ -69,10 +69,27 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details){
 chrome.webRequest.onHeadersReceived.addListener(function(details){
   const originValue = getSrcOriginInMaskmap(details.initiator);
   if (originValue) {
+    let flag = false;
     details.responseHeaders.forEach(function(item){
       if (item.name.toLowerCase() === 'access-control-allow-origin') {
         item.value = originValue;
+        flag = true;
       }
+    })
+    if (!flag) {
+      details.responseHeaders.push({
+        name: 'Access-Control-Allow-Origin',
+        value: originValue
+      })
+      details.responseHeaders.push({
+        name: 'Access-Control-Allow-Credentials',
+        value: 'true'
+      })
+    }
+
+    details.responseHeaders.push({
+      name: 'Access-Control-Allow-Headers',
+      value: 'Accept, Accept-Language, Content-Language, Content-Type'
     })
   }
   return {
